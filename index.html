@@ -1,42 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Downloads</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chad Downloads</title>
     <style>
+        /* --- Reset & fonts --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body, html { height: 100%; }
+
+        /* --- Background --- */
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e1f2f, #2b2b3f);
+            color: #fff;
+        }
+
+        /* --- Container --- */
+        .container {
             text-align: center;
-            background-color: #f0f0f0;
-            padding-top: 100px;
+            background: rgba(0,0,0,0.5);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
         }
+
         h1 {
-            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #00ffe4;
+            text-shadow: 0 0 10px #00ffe4;
         }
-        button {
+
+        /* --- Buttons --- */
+        .download-btn {
+            display: inline-block;
+            margin: 15px;
             padding: 15px 40px;
-            margin: 20px;
-            font-size: 18px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #ff4d6d, #ff9068);
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        .btn-chatlog { background-color: #4CAF50; } /* green */
-        .btn-duran { background-color: #2196F3; }   /* blue */
-        button:hover { opacity: 0.85; }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #ff9068, #ff4d6d);
+        }
+
+        .download-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        @media(max-width: 500px) {
+            .download-btn { width: 80%; padding: 12px 0; font-size: 1em; }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Chad Projects Downloads</h1>
 
-    <h1>Download Page</h1>
+        <a href="https://github.com/duranwiller/chadlog/releases/download/chadcommunicate/senderv2.zip" class="download-btn">
+            Download Sender v2
+        </a>
 
-    <a href="chatlog.exe" download>
-        <button class="btn-chatlog">Download Chatlog</button>
-    </a>
+        <a href="https://github.com/duranwiller/chadlog/releases/download/chadcommunicate/chatlogv2.zip" class="download-btn">
+            Download ChatLog v2
+        </a>
 
-    <a href="cheesesender.exe" download>
-        <button class="btn-duran">Download Cheese Sender</button>
-    </a>
-
+        <footer>
+            &copy; 2026 Chad Projects. Hosted on GitHub.
+        </footer>
+    </div>
 </body>
 </html>
